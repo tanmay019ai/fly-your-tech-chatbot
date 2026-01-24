@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Rahul Sharma",
+    "email": "rahul@example.com",
+    "service": "Website Development"
+  },
+  {
+    "name": "Anita Verma",
+    "email": "anita@example.com",
+    "service": "AI Chatbot"
+  }
+]
