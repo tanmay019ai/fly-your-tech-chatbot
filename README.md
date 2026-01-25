@@ -33,10 +33,6 @@ This project serves as a robust example of integrating large language models wit
 
 ## 🖥️ Screenshots
 
-![Chatbot Interface Screenshot](https://via.placeholder.com/800x450?text=Chatbot+Interface) <!-- TODO: Add actual screenshot of the chatbot in action -->
-
-![Tool Calling in Action](https://via.placeholder.com/800x450?text=Tool+Calling+Example) <!-- TODO: Add screenshot showing tool interaction or a specific feature -->
-
 ## 🛠️ Tech Stack
 
 **Frontend:**
