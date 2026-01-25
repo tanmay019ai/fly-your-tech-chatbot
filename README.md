@@ -14,9 +14,6 @@
 
 **An intelligent, AI-powered chatbot with dynamic tool-calling capabilities, representing the fictional company "Fly Your Tech" to streamline customer interactions.**
 
-[Live Demo](https://demo-link.com) <!-- TODO: Add live demo link if available --> |
-[Documentation](https://docs-link.com) <!-- TODO: Add documentation link if available -->
-
 </div>
 
 ## 📖 Overview
