@@ -326,7 +326,7 @@ This project is currently not licensed. Please contact the author for licensing 
 
 ## 📞 Support & Contact
 
--   📧 Email: [tanmay019ai@example.com] <!-- TODO: Add actual contact email -->
+-   📧 Email: [tanmaysr019@gmail.com] 
 -   🐛 Issues: [GitHub Issues](https://github.com/tanmay019ai/fly-your-tech-chatbot/issues)
 -   💬 Discussions: [GitHub Discussions](https://github.com/tanmay019ai/fly-your-tech-chatbot/discussions) <!-- TODO: Enable GitHub Discussions if desired -->
 
