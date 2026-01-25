@@ -1,20 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from dotenv import load_dotenv
-import os
-import requests
 from fastapi.middleware.cors import CORSMiddleware
 
-load_dotenv()
-
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
-API_URL = "https://api.groq.com/openai/v1/chat/completions"
-
-HEADERS = {
-    "Authorization": f"Bearer {GROQ_API_KEY}",
-    "Content-Type": "application/json"
-}
+from backend.graph import chat_graph
 
 app = FastAPI()
 
@@ -30,20 +18,12 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    payload = {
-        "model": "llama-3.1-8b-instant",
-        "messages": [
-            {"role": "user", "content": req.message}
-        ]
+    result = chat_graph.invoke(
+        {"message": req.message}
+    )
+
+    print("🧾 FINAL GRAPH STATE:", result)
+
+    return {
+        "reply": result["response"]
     }
-
-    res = requests.post(API_URL, headers=HEADERS, json=payload)
-    data = res.json()
-
-    if "choices" in data:
-        return {"reply": data["choices"][0]["message"]["content"]}
-
-    if "error" in data:
-        return {"reply": data["error"]["message"]}
-
-    return {"reply": "Unexpected response"}

@@ -1,13 +1,13 @@
 from langgraph.graph import StateGraph, END
-from state import ChatState
-from nodes import (
+from backend.state import ChatState
+from backend.nodes import (
     router_node,
     company_node,
     lead_node,
     schedule_node,
     llm_node,
 )
-from router import route_condition
+from backend.router import route_condition
 
 graph = StateGraph(ChatState)
 

@@ -1,21 +1,24 @@
-from state import ChatState
-from tools.company_info import company_info_tool
-from tools.lead_tool import lead_management_tool
-from tools.schedule_tool import schedule_email_tool
-from llm import call_llm
+from backend.state import ChatState
+from backend.tools.company_info import company_info_tool
+from backend.tools.lead_tool import lead_tool
+from backend.tools.schedule_tool import schedule_email_tool
+
+from backend.llm import call_llm
 
 def router_node(state: ChatState) -> ChatState:
     return state
 
-def company_node(state: ChatState) -> ChatState:
+def company_node(state):
+    print("🏢 COMPANY NODE HIT")
     result = company_info_tool.run(state["message"])
     return {
         "message": state["message"],
         "response": result
     }
 
+
 def lead_node(state: ChatState) -> ChatState:
-    result = lead_management_tool.run(state["message"])
+    result = lead_tool.run(state["message"])
     return {
         "message": state["message"],
         "response": result

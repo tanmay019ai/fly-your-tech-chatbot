@@ -1,12 +1,21 @@
-import json
 from langchain.tools import tool
+import json
 
 @tool
-def lead_management_tool(query: str) -> str:
+def lead_tool(query: str) -> str:
     """
-    Fetches existing leads and their interested services.
+    Returns existing leads.
     """
-    with open("data/leads.json", "r") as f:
-        leads = json.load(f)
-
+    leads = [
+        {
+            "name": "Rahul Sharma",
+            "email": "rahul@example.com",
+            "service": "Web Development"
+        },
+        {
+            "name": "Anita Verma",
+            "email": "anita@example.com",
+            "service": "AI Chatbot"
+        }
+    ]
     return json.dumps(leads, indent=2)
